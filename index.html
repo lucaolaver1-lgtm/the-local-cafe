@@ -111,10 +111,11 @@ button{border:none;background:none;cursor:pointer;font-family:inherit}
 .about-img-wrap{position:relative}
 .about-img{border-radius:var(--r2xl);overflow:hidden;box-shadow:var(--s2xl)}
 .about-img img{width:100%;height:440px;object-fit:cover;display:block}
-.about-float{position:absolute;bottom:-1.25rem;right:-1.25rem;background:var(--white);border-radius:var(--rxl);padding:1rem;box-shadow:var(--slg);border:1px solid var(--z100);display:none}
+.about-float{position:absolute;bottom:-1.25rem;right:-1.25rem;background:var(--white);border-radius:var(--rxl);padding:1rem;box-shadow:var(--slg);border:1px solid var(--z100);display:none;max-width:240px}
 .about-float-inner{display:flex;align-items:center;gap:.75rem}
-.about-float-emoji{font-size:1.5rem}
-.about-float p{font-size:.6875rem;color:var(--z500);font-weight:400;max-width:140px;line-height:1.4}
+.about-float img{width:60px;height:60px;border-radius:var(--rl);object-fit:cover;flex-shrink:0}
+.about-float p{font-size:.6875rem;color:var(--z500);font-weight:400;line-height:1.45}
+.about-float strong{font-size:.8125rem;font-weight:500;color:var(--z900);display:block;margin-bottom:.125rem}
 
 .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}
 .gallery-item{border-radius:var(--r2xl);overflow:hidden;position:relative;cursor:pointer}
@@ -184,6 +185,8 @@ button{border:none;background:none;cursor:pointer;font-family:inherit}
 .visit-row-icon svg{width:16px;height:16px;color:var(--z600)}
 .visit-row h4{font-size:.875rem;font-weight:500;margin-bottom:.25rem}
 .visit-row p,.visit-row small{font-size:.875rem;color:var(--z500);font-weight:300}
+.visit-row .walk-in{display:inline-flex;align-items:center;gap:.375rem;background:var(--z50);font-size:.75rem;color:var(--z600);padding:.25rem .625rem;border-radius:var(--rfull);margin-top:.5rem;border:1px solid var(--z100)}
+.visit-row .walk-in svg{width:11px;height:11px;color:var(--grn500)}
 .visit-links{display:flex;flex-direction:column;gap:.75rem;margin-top:2.5rem}
 .visit-link{display:flex;align-items:center;gap:1rem;width:100%;padding:1rem;border-radius:var(--rxl);border:1px solid var(--z200);transition:transform var(--tr),box-shadow var(--tr),border-color .2s,background .2s}
 .visit-link:hover{transform:translateY(-2px);box-shadow:var(--slg)}
@@ -291,13 +294,13 @@ button{border:none;background:none;cursor:pointer;font-family:inherit}
 
 <!-- HERO -->
 <section class="hero">
-  <img src="https://z-cdn-media.chatglm.cn/files/af2c271f-4ed7-4d36-b169-157bba5dfd0a.jpg?auth_key=1882140577-33fb2c4dc7524ae3ab13c02b8368543c-0-d478ce03210f4711a3f85ce657a548ff" alt="The Local Cafe Footscray exterior with COFFEE sign and bánh mì blackboard" loading="eager">
+  <img src="https://z-cdn-media.chatglm.cn/files/af2c271f-4ed7-4d36-b169-157bba5dfd0a.jpg?auth_key=1882140577-33fb2c4dc7524ae3ab13c02b8368543c-0-d478ce03210f4711a3f85ce657a548ff" alt="The Local Cafe Footscray" loading="eager">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badges">
-      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Footscray, Melbourne</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 38 Moore St, Footscray</span>
       <span class="badge"><svg class="star" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 4.5 Rating</span>
-      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Open 7 Days</span>
+      <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Open 7 Days from 5am</span>
     </div>
     <h1>The Local<br>Cafe</h1>
     <p>Famous for crispy bánh mì, honest coffee, and that neighbourhood warmth that keeps you coming back. No pretence — just really good food.</p>
@@ -336,7 +339,7 @@ button{border:none;background:none;cursor:pointer;font-family:inherit}
     <div class="about-grid">
       <div class="fade">
         <span class="label">Our Story</span>
-        <h2 class="title">A neighbourhood gem on the corner of Footscray</h2>
+        <h2 class="title">A neighbourhood gem on the corner of Moore St</h2>
         <div class="about-text" style="margin-top:1.5rem">
           <p class="text-light">The Local Cafe is exactly what it says on the tin — a place that feels like home. We're not here to reinvent anything; we're just making really good bánh mì, pouring honest coffee, and serving the people who walk through our door.</p>
           <p class="text-light">Our bánh mì are the star — crispy baguettes stuffed with your choice of roasted pork, BBQ chicken, tofu, and more, all loaded with fresh herbs, pickled veggies, and our house sauces. Pair it with a flat white and you're set.</p>
@@ -350,12 +353,15 @@ button{border:none;background:none;cursor:pointer;font-family:inherit}
       </div>
       <div class="about-img-wrap fade">
         <div class="about-img">
-          <img src="https://z-cdn-media.chatglm.cn/files/5eba3949-0785-42b6-9ffe-2dc6c0477d94.jpg?auth_key=1882140577-284525c81c364c3dafa52ef49d0858a8-0-9e4191c753eefabff099d801ee6de5e0" alt="The Local Cafe exterior with red awning and COFFEE sign" loading="lazy">
+          <img src="https://z-cdn-media.chatglm.cn/files/5eba3949-0785-42b6-9ffe-2dc6c0477d94.jpg?auth_key=1882140577-284525c81c364c3dafa52ef49d0858a8-0-9e4191c753eefabff099d801ee6de5e0" alt="The Local Cafe exterior" loading="lazy">
         </div>
         <div class="about-float">
           <div class="about-float-inner">
-            <span class="about-float-emoji">🐶</span>
-            <p>Meet our furry local — always at the door to welcome you</p>
+            <img src="https://z-cdn-media.chatglm.cn/files/32effd91-11a7-42c7-af94-9ac4e5e2c02f.jpg?auth_key=1882140577-057da0253b234212a386ab7c08b1ec03-0-ce232fef55ab5c300ced06de3b64875d" alt="The cafe dog at the doorway">
+            <div>
+              <strong>Meet our furry local</strong>
+              <p>Always at the door to welcome you</p>
+            </div>
           </div>
         </div>
       </div>
@@ -371,11 +377,11 @@ button{border:none;background:none;cursor:pointer;font-family:inherit}
       <h2 class="title">A taste of what awaits</h2>
     </div>
     <div class="gallery-grid fade">
-      <div class="gallery-item span2"><img src="https://z-cdn-media.chatglm.cn/files/f1c500b6-a2c9-4527-b229-93e4f4d7e725.jpeg?auth_key=1882140577-91536194da5749a9902b5050f8983129-0-8d6c19bb3dc6b0071132fb6b1e2f1b2b" alt="Crispy bánh mì packed with fillings in a newspaper-lined box" loading="lazy" style="min-height:280px"><div class="gallery-label"><span>Signature Bánh Mì</span></div></div>
-      <div class="gallery-item"><img src="https://z-cdn-media.chatglm.cn/files/9815f7e0-99e9-41e7-93cb-47b2359a1c75.jpg?auth_key=1882140577-d3b1aac5666746a9a84e4fc4db0fa0d4-0-aa2b20b228045dd00caa6f111b7c3d31" alt="White ceramic cup of coffee on wooden table" style="min-height:140px" loading="lazy"><div class="gallery-label"><span class="sm">Specialty Coffee</span></div></div>
-      <div class="gallery-item"><img src="https://z-cdn-media.chatglm.cn/files/deb3e2de-40c9-4340-86ef-203bc8bea7bc.jpg?auth_key=1882140577-ca8fd828add24934a558249cdabaae10-0-89ec7bc9390e40854d86e5f94c17c720" alt="Powdered pastry on brown paper on wooden table" style="min-height:140px" loading="lazy"><div class="gallery-label"><span class="sm">Fresh Pastries</span></div></div>
-      <div class="gallery-item"><img src="https://z-cdn-media.chatglm.cn/files/32effd91-11a7-42c7-af94-9ac4e5e2c02f.jpg?auth_key=1882140577-057da0253b234212a386ab7c08b1ec03-0-ce232fef55ab5c300ced06de3b64875d" alt="Dog with pink collar sitting at the cafe doorway" style="min-height:140px" loading="lazy"><div class="gallery-label"><span class="sm">Our Door Greeter 🐾</span></div></div>
-      <div class="gallery-item"><img src="https://z-cdn-media.chatglm.cn/files/af2c271f-4ed7-4d36-b169-157bba5dfd0a.jpg?auth_key=1882140577-33fb2c4dc7524ae3ab13c02b8368543c-0-d478ce03210f4711a3f85ce657a548ff" alt="Cafe exterior with COFFEE sign and blackboard menu" style="min-height:140px" loading="lazy"><div class="gallery-label"><span class="sm">The Storefront</span></div></div>
+      <div class="gallery-item span2"><img src="https://z-cdn-media.chatglm.cn/files/f1c500b6-a2c9-4527-b229-93e4f4d7e725.jpeg?auth_key=1882140577-91536194da5749a9902b5050f8983129-0-8d6c19bb3dc6b0071132fb6b1e2f1b2b" alt="Signature bánh mì in newspaper wrapping" loading="lazy" style="min-height:280px"><div class="gallery-label"><span>Signature Bánh Mì</span></div></div>
+      <div class="gallery-item"><img src="https://z-cdn-media.chatglm.cn/files/9815f7e0-99e9-41e7-93cb-47b2359a1c75.jpg?auth_key=1882140577-d3b1aac5666746a9a84e4fc4db0fa0d4-0-aa2b20b228045dd00caa6f111b7c3d31" alt="Coffee on wooden table" style="min-height:140px" loading="lazy"><div class="gallery-label"><span class="sm">Specialty Coffee</span></div></div>
+      <div class="gallery-item"><img src="https://z-cdn-media.chatglm.cn/files/deb3e2de-40c9-4340-86ef-203bc8bea7bc.jpg?auth_key=1882140577-ca8fd828add24934a558249cdabaae10-0-89ec7bc9390e40854d86e5f94c17c720" alt="Fresh pastry with powdered sugar" style="min-height:140px" loading="lazy"><div class="gallery-label"><span class="sm">Fresh Pastries</span></div></div>
+      <div class="gallery-item"><img src="https://z-cdn-media.chatglm.cn/files/32effd91-11a7-42c7-af94-9ac4e5e2c02f.jpg?auth_key=1882140577-057da0253b234212a386ab7c08b1ec03-0-ce232fef55ab5c300ced06de3b64875d" alt="Dog at the cafe doorway" style="min-height:140px" loading="lazy"><div class="gallery-label"><span class="sm">Our Door Greeter</span></div></div>
+      <div class="gallery-item"><img src="https://z-cdn-media.chatglm.cn/files/af2c271f-4ed7-4d36-b169-157bba5dfd0a.jpg?auth_key=1882140577-33fb2c4dc7524ae3ab13c02b8368543c-0-d478ce03210f4711a3f85ce657a548ff" alt="Cafe storefront" style="min-height:140px" loading="lazy"><div class="gallery-label"><span class="sm">The Storefront</span></div></div>
     </div>
   </div>
 </section>
@@ -389,22 +395,22 @@ button{border:none;background:none;cursor:pointer;font-family:inherit}
     </div>
     <div class="menu-cards fade">
       <a href="https://www.ubereats.com/au/store/the-local-cafe-footscray/k5R2cPdLW02J16SGiyb5KQ" target="_blank" rel="noopener noreferrer" class="menu-card">
-        <div class="menu-card-img"><img src="https://z-cdn-media.chatglm.cn/files/f1c500b6-a2c9-4527-b229-93e4f4d7e725.jpeg?auth_key=1882140577-91536194da5749a9902b5050f8983129-0-8d6c19bb3dc6b0071132fb6b1e2f1b2b" alt="Bánh mì with crispy pork and vegetables" loading="lazy"><span class="menu-card-tag">Signature</span></div>
+        <div class="menu-card-img"><img src="https://z-cdn-media.chatglm.cn/files/f1c500b6-a2c9-4527-b229-93e4f4d7e725.jpeg?auth_key=1882140577-91536194da5749a9902b5050f8983129-0-8d6c19bb3dc6b0071132fb6b1e2f1b2b" alt="Bánh mì" loading="lazy"><span class="menu-card-tag">Signature</span></div>
         <div class="menu-card-body"><div class="menu-card-row"><h3>Bánh Mì — Crispy Roasted Pork</h3><span class="price">$12</span></div><p class="desc">Crispy roast pork, pâté, pickled carrot & daikon, fresh herbs, chilli, soy sauce & mayo in a crispy baguette</p></div>
       </a>
       <a href="https://www.ubereats.com/au/store/the-local-cafe-footscray/k5R2cPdLW02J16SGiyb5KQ" target="_blank" rel="noopener noreferrer" class="menu-card">
-        <div class="menu-card-img"><img src="https://z-cdn-media.chatglm.cn/files/deb3e2de-40c9-4340-86ef-203bc8bea7bc.jpg?auth_key=1882140577-ca8fd828add24934a558249cdabaae10-0-89ec7bc9390e40854d86e5f94c17c720" alt="Powdered pastry muffin" loading="lazy"><span class="menu-card-tag">Popular</span></div>
+        <div class="menu-card-img"><img src="https://z-cdn-media.chatglm.cn/files/deb3e2de-40c9-4340-86ef-203bc8bea7bc.jpg?auth_key=1882140577-ca8fd828add24934a558249cdabaae10-0-89ec7bc9390e40854d86e5f94c17c720" alt="Pastry" loading="lazy"><span class="menu-card-tag">Popular</span></div>
         <div class="menu-card-body"><div class="menu-card-row"><h3>Fresh Baked Pastries</h3><span class="price">$5</span></div><p class="desc">Handmade daily — muffins, croissants, and sweet treats baked in-house with seasonal flavours</p></div>
       </a>
       <a href="https://www.ubereats.com/au/store/the-local-cafe-footscray/k5R2cPdLW02J16SGiyb5KQ" target="_blank" rel="noopener noreferrer" class="menu-card">
-        <div class="menu-card-img"><img src="https://z-cdn-media.chatglm.cn/files/9815f7e0-99e9-41e7-93cb-47b2359a1c75.jpg?auth_key=1882140577-d3b1aac5666746a9a84e4fc4db0fa0d4-0-aa2b20b228045dd00caa6f111b7c3d31" alt="Coffee in white ceramic cup" loading="lazy"><span class="menu-card-tag">Favourite</span></div>
+        <div class="menu-card-img"><img src="https://z-cdn-media.chatglm.cn/files/9815f7e0-99e9-41e7-93cb-47b2359a1c75.jpg?auth_key=1882140577-d3b1aac5666746a9a84e4fc4db0fa0d4-0-aa2b20b228045dd00caa6f111b7c3d31" alt="Coffee" loading="lazy"><span class="menu-card-tag">Favourite</span></div>
         <div class="menu-card-body"><div class="menu-card-row"><h3>Specialty Coffee</h3><span class="price">$5.50</span></div><p class="desc">Locally roasted beans, expertly pulled. Flat white, latte, long black, iced coffee & more</p></div>
       </a>
     </div>
     <div class="menu-mini fade">
-      <a href="https://www.ubereats.com/au/store/the-local-cafe-footscray/k5R2cPdLW02J16SGiyb5KQ" target="_blank" rel="noopener noreferrer" class="menu-mini-card"><img src="https://z-cdn-media.chatglm.cn/files/f1c500b6-a2c9-4527-b229-93e4f4d7e725.jpeg?auth_key=1882140577-91536194da5749a9902b5050f8983129-0-8d6c19bb3dc6b0071132fb6b1e2f1b2b" alt="BBQ Chicken Bánh Mì" loading="lazy"><div><h4>BBQ Chicken Bánh Mì</h4><small>$12</small></div></a>
-      <a href="https://www.ubereats.com/au/store/the-local-cafe-footscray/k5R2cPdLW02J16SGiyb5KQ" target="_blank" rel="noopener noreferrer" class="menu-mini-card"><img src="https://z-cdn-media.chatglm.cn/files/f1c500b6-a2c9-4527-b229-93e4f4d7e725.jpeg?auth_key=1882140577-91536194da5749a9902b5050f8983129-0-8d6c19bb3dc6b0071132fb6b1e2f1b2b" alt="Tofu Bánh Mì" loading="lazy"><div><h4>Tofu Bánh Mì</h4><small>$11</small></div></a>
-      <a href="https://www.ubereats.com/au/store/the-local-cafe-footscray/k5R2cPdLW02J16SGiyb5KQ" target="_blank" rel="noopener noreferrer" class="menu-mini-card"><img src="https://z-cdn-media.chatglm.cn/files/f1c500b6-a2c9-4527-b229-93e4f4d7e725.jpeg?auth_key=1882140577-91536194da5749a9902b5050f8983129-0-8d6c19bb3dc6b0071132fb6b1e2f1b2b" alt="BBQ Pork Bánh Mì" loading="lazy"><div><h4>BBQ Pork Bánh Mì</h4><small>$12</small></div></a>
+      <a href="https://www.ubereats.com/au/store/the-local-cafe-footscray/k5R2cPdLW02J16SGiyb5KQ" target="_blank" rel="noopener noreferrer" class="menu-mini-card"><img src="https://z-cdn-media.chatglm.cn/files/f1c500b6-a2c9-4527-b229-93e4f4d7e725.jpeg?auth_key=1882140577-91536194da5749a9902b5050f8983129-0-8d6c19bb3dc6b0071132fb6b1e2f1b2b" alt="BBQ Chicken" loading="lazy"><div><h4>BBQ Chicken Bánh Mì</h4><small>$12</small></div></a>
+      <a href="https://www.ubereats.com/au/store/the-local-cafe-footscray/k5R2cPdLW02J16SGiyb5KQ" target="_blank" rel="noopener noreferrer" class="menu-mini-card"><img src="https://z-cdn-media.chatglm.cn/files/f1c500b6-a2c9-4527-b229-93e4f4d7e725.jpeg?auth_key=1882140577-91536194da5749a9902b5050f8983129-0-8d6c19bb3dc6b0071132fb6b1e2f1b2b" alt="Tofu" loading="lazy"><div><h4>Tofu Bánh Mì</h4><small>$11</small></div></a>
+      <a href="https://www.ubereats.com/au/store/the-local-cafe-footscray/k5R2cPdLW02J16SGiyb5KQ" target="_blank" rel="noopener noreferrer" class="menu-mini-card"><img src="https://z-cdn-media.chatglm.cn/files/f1c500b6-a2c9-4527-b229-93e4f4d7e725.jpeg?auth_key=1882140577-91536194da5749a9902b5050f8983129-0-8d6c19bb3dc6b0071132fb6b1e2f1b2b" alt="BBQ Pork" loading="lazy"><div><h4>BBQ Pork Bánh Mì</h4><small>$12</small></div></a>
       <a href="https://www.ubereats.com/au/store/the-local-cafe-footscray/k5R2cPdLW02J16SGiyb5KQ" target="_blank" rel="noopener noreferrer" class="menu-mini-card"><img src="https://z-cdn-media.chatglm.cn/files/9815f7e0-99e9-41e7-93cb-47b2359a1c75.jpg?auth_key=1882140577-d3b1aac5666746a9a84e4fc4db0fa0d4-0-aa2b20b228045dd00caa6f111b7c3d31" alt="Iced Coffee" loading="lazy"><div><h4>Iced Coffee</h4><small>$6</small></div></a>
     </div>
   </div>
@@ -425,7 +431,6 @@ button{border:none;background:none;cursor:pointer;font-family:inherit}
       <div class="review-card"><div class="review-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="empty" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Great spot for a quick lunch. The pastries are fresh and the coffee hits the spot. Gets busy at midday but that's a good sign!"</p><div class="review-author"><div class="review-avatar amber">L</div><div><div class="review-name">Lisa K.</div><div class="review-src">Google Reviews</div></div></div></div>
       <div class="review-card"><div class="review-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Ordered through Uber Eats and the bánh mì was still crispy when it arrived. Impressed by how well it travelled. Will order again!"</p><div class="review-author"><div class="review-avatar rose">M</div><div><div class="review-name">Mike R.</div><div class="review-src">Uber Eats</div></div></div></div>
       <div class="review-card"><div class="review-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Our go-to lunch spot in Footscray. The vegan BBQ pork option is brilliant. Love the vibe, love the food, love the pup at the door."</p><div class="review-author"><div class="review-avatar cyan">E</div><div><div class="review-name">Emma W.</div><div class="review-src">TripAdvisor</div></div></div></div>
-      <!-- duplicates for seamless loop -->
       <div class="review-card"><div class="review-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Best bánh mì in Footscray, no question. The crispy pork is incredible — perfect crunch, amazing flavours. And the coffee is top notch too."</p><div class="review-author"><div class="review-avatar indigo">S</div><div><div class="review-name">Sarah M.</div><div class="review-src">Google Reviews</div></div></div></div>
       <div class="review-card"><div class="review-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Hidden gem! The tofu bánh mì is genuinely one of the best I've had — and I've eaten a lot of bánh mì. The dog at the door is a bonus."</p><div class="review-author"><div class="review-avatar emerald">J</div><div><div class="review-name">James T.</div><div class="review-src">TripAdvisor</div></div></div></div>
       <div class="review-card"><div class="review-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="empty" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p>"Great spot for a quick lunch. The pastries are fresh and the coffee hits the spot. Gets busy at midday but that's a good sign!"</p><div class="review-author"><div class="review-avatar amber">L</div><div><div class="review-name">Lisa K.</div><div class="review-src">Google Reviews</div></div></div></div>
@@ -443,9 +448,29 @@ button{border:none;background:none;cursor:pointer;font-family:inherit}
         <span class="label">Find Us</span>
         <h2 class="title" style="margin-bottom:2rem">Come say hello</h2>
         <div class="visit-info-list">
-          <div class="visit-row"><div class="visit-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Address</h4><p>The Local Cafe<br>Footscray VIC 3011, Australia</p></div></div>
-          <div class="visit-row"><div class="visit-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><h4>Hours</h4><p>Monday – Friday: 7:00am – 3:00pm</p><small>Saturday – Sunday: 8:00am – 3:00pm</small></div></div>
-          <div class="visit-row"><div class="visit-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><h4>Contact</h4><p>Call ahead for large orders</p></div></div>
+          <div class="visit-row">
+            <div class="visit-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <h4>Address</h4>
+              <p>38 Moore St, Footscray<br>VIC 3011, Australia</p>
+            </div>
+          </div>
+          <div class="visit-row">
+            <div class="visit-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div>
+              <h4>Hours</h4>
+              <p>Monday – Saturday: 5:00 AM – 5:00 PM</p>
+              <small>Sunday: 6:00 AM – 5:00 PM</small>
+              <div class="walk-in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Walk-in only — no reservations</div>
+            </div>
+          </div>
+          <div class="visit-row">
+            <div class="visit-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div>
+              <h4>Contact</h4>
+              <p>Call ahead for large catering orders</p>
+            </div>
+          </div>
         </div>
         <div class="visit-links">
           <a href="https://www.google.com/maps/place/the+local+cafe+footscray/data=!4m2!3m1!1s0x6ad65d00361f89b7:0xf8e9916e40d800cf" target="_blank" rel="noopener noreferrer" class="visit-link blue"><div class="visit-link-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></div><div class="visit-link-text"><p>Open in Google Maps</p><small>Get directions & view street view</small></div><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
@@ -455,7 +480,7 @@ button{border:none;background:none;cursor:pointer;font-family:inherit}
       </div>
       <div class="fade">
         <div class="map-wrap">
-          <iframe src="https://maps.google.com/maps?q=The+Local+Cafe+Footscray+Melbourne&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="The Local Cafe Footscray on Google Maps"></iframe>
+          <iframe src="https://maps.google.com/maps?q=38+Moore+St+Footscray+Melbourne&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="The Local Cafe on Google Maps"></iframe>
           <a href="https://www.google.com/maps/place/the+local+cafe+footscray/data=!4m2!3m1!1s0x6ad65d00361f89b7:0xf8e9916e40d800cf" target="_blank" rel="noopener noreferrer" class="map-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> View Larger</a>
         </div>
       </div>
@@ -484,7 +509,7 @@ button{border:none;background:none;cursor:pointer;font-family:inherit}
     <div class="footer-grid">
       <div class="footer-about">
         <a href="#" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg></div><span>The Local Cafe</span></a>
-        <p>Your neighbourhood bánh mì & coffee spot in the heart of Footscray, Melbourne. Crispy rolls, honest coffee, good vibes.</p>
+        <p>38 Moore St, Footscray VIC 3011. Open Mon–Sat 5am–5pm, Sun 6am–5pm. Walk-in only, no reservations needed.</p>
       </div>
       <div class="footer-col"><h5>Order</h5><ul><li><a href="https://www.ubereats.com/au/store/the-local-cafe-footscray/k5R2cPdLW02J16SGiyb5KQ" target="_blank" rel="noopener noreferrer">Uber Eats</a></li></ul></div>
       <div class="footer-col"><h5>Discover</h5><ul><li><a href="https://www.google.com/maps/place/the+local+cafe+footscray/data=!4m2!3m1!1s0x6ad65d00361f89b7:0xf8e9916e40d800cf" target="_blank" rel="noopener noreferrer">Google Maps</a></li><li><a href="https://www.tripadvisor.com.au/Restaurant_Review-g2062777-d27730272-Reviews-The_Local_Cafe-Footscray_Maribyrnong_Greater_Melbourne_Victoria.html" target="_blank" rel="noopener noreferrer">TripAdvisor</a></li></ul></div>
@@ -512,4 +537,4 @@ button{border:none;background:none;cursor:pointer;font-family:inherit}
 })();
 </script>
 </body>
-</html> 
+</html>
